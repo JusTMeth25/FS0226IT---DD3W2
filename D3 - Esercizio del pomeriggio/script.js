@@ -79,6 +79,28 @@ console.log(perColoreOcchi);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+for (const character of starWarsCharacters) {
+   switch (character.eye_color) {
+      case 'blue': 
+      perColoreOcchi.blue.push(character);
+      break;
+      
+      case 'yellow':
+         perColoreOcchi.yellow.push(character);
+         break;
+
+         case 'brown':
+            perColoreOcchi.brown.push(character);
+            break;
+            case 'red':
+               perColoreOcchi.red.push(character);
+               break;
+                  default:
+                     perColoreOcchi.red.push(character);
+                     break;
+   } 
+}
+console.log(perColoreOcchi);
 
 
 /* ESERCIZIO 5 — Massa totale dell'equipaggio (while)
@@ -88,7 +110,15 @@ console.log(perColoreOcchi);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let i = 0;
+let massaTotale = 0;
 
+while (i < starWarsCharacters.length) {
+   massaTotale += Number(starWarsCharacters[i].mass);
+   i ++;
+}
+
+console.log(`La massa totale dell'equipaggio è: ${massaTotale} kg`);
 
 /* ESERCIZIO 6 — Classifica il carico
    Su massaTotale, switch (true) o if/else if:
@@ -100,7 +130,23 @@ console.log(perColoreOcchi);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+switch (true) {
+   case (massaTotale < 500):
+      console.log('Carico leggero');
+      break;
+      case (massaTotale >= 500 && massaTotale < 700):
+         console.log('Carico medio');
+         break
+         case (massaTotale >= 700 && massaTotale < 900):
+            console.log('Attenzione: oltre 700');
+            break;
+            case (massaTotale >= 900 && massaTotale <= 1000):
+            console.log('Carico critico');
+            break;
+            default:
+               console.log('Pericolo: sovraccarico')
+               break;
+};
 
 /* ESERCIZIO 7 — Robotizza i n/a
    For: per ogni personaggio con gender === "n/a", cambialo in "robot".
