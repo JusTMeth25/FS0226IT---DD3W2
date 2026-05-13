@@ -7,18 +7,107 @@ REGOLE
 */
 
 const starWarsCharacters = [
-  { name: "Luke Skywalker", height: "172", mass: "77",  hair_color: "blond",        skin_color: "fair",        eye_color: "blue",      birth_year: "19BBY",   gender: "male" },
-  { name: "C-3PO",          height: "167", mass: "75",  hair_color: "n/a",          skin_color: "gold",        eye_color: "yellow",    birth_year: "112BBY",  gender: "n/a" },
-  { name: "R2-D2",          height: "96",  mass: "32",  hair_color: "n/a",          skin_color: "white, blue", eye_color: "red",       birth_year: "33BBY",   gender: "n/a" },
-  { name: "Darth Vader",    height: "202", mass: "136", hair_color: "none",         skin_color: "white",       eye_color: "yellow",    birth_year: "41.9BBY", gender: "male" },
-  { name: "Leia Organa",    height: "150", mass: "49",  hair_color: "brown",        skin_color: "light",       eye_color: "brown",     birth_year: "19BBY",   gender: "female" },
-  { name: "Owen Lars",      height: "178", mass: "120", hair_color: "brown, grey",  skin_color: "light",       eye_color: "blue",      birth_year: "52BBY",   gender: "male" },
-  { name: "Beru Lars",      height: "165", mass: "75",  hair_color: "brown",        skin_color: "light",       eye_color: "blue",      birth_year: "47BBY",   gender: "female" },
-  { name: "R5-D4",          height: "97",  mass: "32",  hair_color: "n/a",          skin_color: "white, red",  eye_color: "red",       birth_year: "unknown", gender: "n/a" },
-  { name: "Biggs Darklighter", height: "183", mass: "84", hair_color: "black",      skin_color: "light",       eye_color: "brown",     birth_year: "24BBY",   gender: "male" },
-  { name: "Obi-Wan Kenobi", height: "182", mass: "77",  hair_color: "auburn, white", skin_color: "fair",       eye_color: "blue-gray", birth_year: "57BBY",   gender: "male" }
+  {
+    name: "Luke Skywalker",
+    height: "172",
+    mass: "77",
+    hair_color: "blond",
+    skin_color: "fair",
+    eye_color: "blue",
+    birth_year: "19BBY",
+    gender: "male",
+  },
+  {
+    name: "C-3PO",
+    height: "167",
+    mass: "75",
+    hair_color: "n/a",
+    skin_color: "gold",
+    eye_color: "yellow",
+    birth_year: "112BBY",
+    gender: "n/a",
+  },
+  {
+    name: "R2-D2",
+    height: "96",
+    mass: "32",
+    hair_color: "n/a",
+    skin_color: "white, blue",
+    eye_color: "red",
+    birth_year: "33BBY",
+    gender: "n/a",
+  },
+  {
+    name: "Darth Vader",
+    height: "202",
+    mass: "136",
+    hair_color: "none",
+    skin_color: "white",
+    eye_color: "yellow",
+    birth_year: "41.9BBY",
+    gender: "male",
+  },
+  {
+    name: "Leia Organa",
+    height: "150",
+    mass: "49",
+    hair_color: "brown",
+    skin_color: "light",
+    eye_color: "brown",
+    birth_year: "19BBY",
+    gender: "female",
+  },
+  {
+    name: "Owen Lars",
+    height: "178",
+    mass: "120",
+    hair_color: "brown, grey",
+    skin_color: "light",
+    eye_color: "blue",
+    birth_year: "52BBY",
+    gender: "male",
+  },
+  {
+    name: "Beru Lars",
+    height: "165",
+    mass: "75",
+    hair_color: "brown",
+    skin_color: "light",
+    eye_color: "blue",
+    birth_year: "47BBY",
+    gender: "female",
+  },
+  {
+    name: "R5-D4",
+    height: "97",
+    mass: "32",
+    hair_color: "n/a",
+    skin_color: "white, red",
+    eye_color: "red",
+    birth_year: "unknown",
+    gender: "n/a",
+  },
+  {
+    name: "Biggs Darklighter",
+    height: "183",
+    mass: "84",
+    hair_color: "black",
+    skin_color: "light",
+    eye_color: "brown",
+    birth_year: "24BBY",
+    gender: "male",
+  },
+  {
+    name: "Obi-Wan Kenobi",
+    height: "182",
+    mass: "77",
+    hair_color: "auburn, white",
+    skin_color: "fair",
+    eye_color: "blue-gray",
+    birth_year: "57BBY",
+    gender: "male",
+  },
 ];
-
 
 /* ESERCIZIO 1 — Estrai i nomi
    Array vuoto "nomi". Con un for, fai push di ogni starWarsCharacters[i].name.
@@ -28,10 +117,10 @@ const starWarsCharacters = [
 /* SCRIVI QUI LA TUA RISPOSTA */
 const nomi = [];
 
-for (let i = 0; i < starWarsCharacters.length; i ++) {
-nomi.push(starWarsCharacters[i].name);
-} 
-	console.log(nomi);
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  nomi.push(starWarsCharacters[i].name);
+}
+console.table(nomi);
 
 /* ESERCIZIO 2 — Solo i femminili
    Array vuoto "personaggiFemminili". Con un for + if (gender === "female"),
@@ -42,19 +131,18 @@ nomi.push(starWarsCharacters[i].name);
 /* SCRIVI QUI LA TUA RISPOSTA */
 const personaggiFemminili = [];
 
-for (let i = 0; i < starWarsCharacters.length; i ++) {
-if (starWarsCharacters[i].gender === 'female') {
-   let newpersonaggiFemminili = {
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender === "female") {
+    let newpersonaggiFemminili = {
       nome: starWarsCharacters[i].name,
       hair_color: starWarsCharacters[i].hair_color,
       eye_color: starWarsCharacters[i].eye_color,
-   };
-   personaggiFemminili.push(newpersonaggiFemminili);
-}
+    };
+    personaggiFemminili.push(newpersonaggiFemminili);
+  }
 }
 
 console.log(personaggiFemminili);
-
 
 /* ESERCIZIO 3 — Oggetto raggruppamento
    Crea perColoreOcchi con chiavi: blue, yellow, brown, red, blue-gray (con trattino).
@@ -63,11 +151,11 @@ console.log(personaggiFemminili);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const perColoreOcchi = {
-   blue: [],
-   yellow: [],
-   brown: [],
-   red: [],
-   'blue-gray': [],
+  blue: [],
+  yellow: [],
+  brown: [],
+  red: [],
+  "blue-gray": [],
 };
 
 console.log(perColoreOcchi);
@@ -79,29 +167,27 @@ console.log(perColoreOcchi);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-for (const character of starWarsCharacters) {
-   switch (character.eye_color) {
-      case 'blue': 
-      perColoreOcchi.blue.push(character);
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  switch (starWarsCharacters[i].eye_color) {
+    case "blue":
+      perColoreOcchi.blue.push(starWarsCharacters[i]);
       break;
-      
-      case 'yellow':
-         perColoreOcchi.yellow.push(character);
-         break;
-
-         case 'brown':
-            perColoreOcchi.brown.push(character);
-            break;
-            case 'red':
-               perColoreOcchi.red.push(character);
-               break;
-                  default:
-                     perColoreOcchi.red.push(character);
-                     break;
-   } 
+    case "yellow":
+      perColoreOcchi.yellow.push(starWarsCharacters[i]);
+      break;
+    case "brown":
+      perColoreOcchi.brown.push(starWarsCharacters[i]);
+      break;
+    case "red":
+      perColoreOcchi.red.push(starWarsCharacters[i]);
+      break;
+    case "blue-gray":
+      perColoreOcchi["blue-gray"].push(starWarsCharacters[i]);
+      break;
+  }
 }
-console.log(perColoreOcchi);
 
+console.table(perColoreOcchi);
 
 /* ESERCIZIO 5 — Massa totale dell'equipaggio (while)
    i = 0, massaTotale = 0.
@@ -114,8 +200,8 @@ let i = 0;
 let massaTotale = 0;
 
 while (i < starWarsCharacters.length) {
-   massaTotale += Number(starWarsCharacters[i].mass);
-   i ++;
+  massaTotale += Number(starWarsCharacters[i].mass); // converto il numero della massa che era string
+  i++;
 }
 
 console.log(`La massa totale dell'equipaggio è: ${massaTotale} kg`);
@@ -131,22 +217,22 @@ console.log(`La massa totale dell'equipaggio è: ${massaTotale} kg`);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 switch (true) {
-   case (massaTotale < 500):
-      console.log('Carico leggero');
-      break;
-      case (massaTotale >= 500 && massaTotale < 700):
-         console.log('Carico medio');
-         break
-         case (massaTotale >= 700 && massaTotale < 900):
-            console.log('Attenzione: oltre 700');
-            break;
-            case (massaTotale >= 900 && massaTotale <= 1000):
-            console.log('Carico critico');
-            break;
-            default:
-               console.log('Pericolo: sovraccarico')
-               break;
-};
+  case massaTotale < 500:
+    console.log("Carico leggero");
+    break;
+  case massaTotale >= 500 && massaTotale < 700:
+    console.log("Carico medio");
+    break;
+  case massaTotale >= 700 && massaTotale < 900:
+    console.log("Attenzione: oltre 700");
+    break;
+  case massaTotale >= 900 && massaTotale <= 1000:
+    console.log("Carico critico");
+    break;
+  default:
+    console.log("Pericolo: sovraccarico");
+    break;
+}
 
 /* ESERCIZIO 7 — Robotizza i n/a
    For: per ogni personaggio con gender === "n/a", cambialo in "robot".
@@ -154,7 +240,12 @@ switch (true) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+for (const character of starWarsCharacters) {
+  if (character.gender === "n/a") {
+    character.gender = "robot";
+  }
+}
+console.log(starWarsCharacters);
 
 /* ESERCIZIO 8 — Più alto e più basso
    For su starWarsCharacters. Trova il personaggio con altezza maggiore e quello con altezza minore.
@@ -163,7 +254,24 @@ switch (true) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let piuAlto = starWarsCharacters[0];
+let piuBasso = starWarsCharacters[0];
 
+for (const character of starWarsCharacters) {
+  const altezzaCorrente = Number(character.height);
+  const altezzaMassima = Number(piuAlto.height);
+  const altezzaMinima = Number(piuBasso.height);
+
+  if (altezzaCorrente > altezzaMassima) {
+    piuAlto = character;
+  } 
+  if (altezzaCorrente < altezzaMinima) {
+   piuBasso = character;
+  }
+}
+
+console.log(`Più alto: ${piuAlto.name} ${piuAlto.height} cm`);
+console.log(`Più basso: ${piuBasso.name} ${piuBasso.height} cm`);
 
 /* ESERCIZIO 9 — Rimuovi i femminili dai nomi (cicli annidati)
    Sull'array "nomi" dell'esercizio 1: for esterno su nomi, for interno su personaggiFemminili.
@@ -173,7 +281,6 @@ switch (true) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-
 /* ESERCIZIO 10 — Personaggio casuale
    indice = Math.floor(Math.random() * starWarsCharacters.length)
    personaggio = starWarsCharacters[indice]
@@ -182,7 +289,6 @@ switch (true) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
 
 /* --EXTRA-- ESERCIZIO 11 — Conta per colore di occhi
    For...in sulle chiavi di perColoreOcchi.
