@@ -26,7 +26,12 @@ const starWarsCharacters = [
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const nomi = [];
 
+for (let i = 0; i < starWarsCharacters.length; i ++) {
+nomi.push(starWarsCharacters[i].name);
+} 
+	console.log(nomi);
 
 /* ESERCIZIO 2 — Solo i femminili
    Array vuoto "personaggiFemminili". Con un for + if (gender === "female"),
@@ -35,6 +40,20 @@ const starWarsCharacters = [
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const personaggiFemminili = [];
+
+for (let i = 0; i < starWarsCharacters.length; i ++) {
+if (starWarsCharacters[i].gender === 'female') {
+   let newpersonaggiFemminili = {
+      nome: starWarsCharacters[i].name,
+      hair_color: starWarsCharacters[i].hair_color,
+      eye_color: starWarsCharacters[i].eye_color,
+   };
+   personaggiFemminili.push(newpersonaggiFemminili);
+}
+}
+
+console.log(personaggiFemminili);
 
 
 /* ESERCIZIO 3 — Oggetto raggruppamento
@@ -43,7 +62,15 @@ const starWarsCharacters = [
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const perColoreOcchi = {
+   blue: [],
+   yellow: [],
+   brown: [],
+   red: [],
+   'blue-gray': [],
+};
 
+console.log(perColoreOcchi);
 
 /* ESERCIZIO 4 — Raggruppa per colore degli occhi
    For su starWarsCharacters + switch (character.eye_color).
